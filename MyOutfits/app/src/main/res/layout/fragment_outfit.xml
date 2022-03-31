@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:id="@+id/fragment_outfit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameCollectOutfit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+        <ImageButton
+            android:id="@+id/editBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white"
+            android:contentDescription="@string/editBudget"
+            app:srcCompat="@drawable/edit_budget"
+            tools:ignore="RtlHardcoded,TouchTargetSizeCheck" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameCollectOutfit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout3">
+
+        <FrameLayout
+            android:id="@+id/frameLayoutIn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UselessParent">
+
+            <FrameLayout
+                android:id="@+id/framePicture"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/pictureFrame"
+                    android:layout_width="208dp"
+                    android:layout_height="166dp"
+                    android:layout_gravity="right"
+                    android:contentDescription="@string/headOutfit"
+                    app:srcCompat="@drawable/welcome"
+                    tools:ignore="RtlHardcoded" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/collectOutfit"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:background="@color/red"
+                android:text="@string/collectOutfit"
+                android:textColor="@color/white"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <FrameLayout
+                android:id="@+id/frameText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/headCollectOutfits"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_marginTop="16sp"
+                    android:layout_marginEnd="38dp"
+                    android:text="@string/headOutfit"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/descriptionText"
+                    android:layout_width="170sp"
+                    android:layout_height="60sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_marginTop="72sp"
+                    android:text="@string/descriptionCollectOutfits"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameReadyOutfits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameCollectOutfit">
+
+        <Button
+            android:id="@+id/seeReadyAllOutfits"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="280dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/black_custom"
+            android:text="@string/seeReadyAllOutfits"
+            android:textColor="@color/white"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="212dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="52dp"
+            android:scrollbars="none"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/frameOne"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <FrameLayout
+                        android:id="@+id/framePictureOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="36dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/pictureOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/headOutfit"
+                            app:srcCompat="@drawable/welcome"
+                            tools:ignore="RtlHardcoded" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/white_custom">
+
+                        <ImageButton
+                            android:id="@+id/imageButtonOne"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom|left"
+                            android:background="@color/white_custom"
+                            android:contentDescription="@string/buy"
+                            app:srcCompat="@drawable/cart"
+                            app:tint="@color/black_custom"
+                            tools:ignore="RtlHardcoded,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/priceOne"
+                            android:layout_width="59sp"
+                            android:layout_height="20sp"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/white_custom"
+                            android:gravity="center|right"
+                            android:text="@string/price"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/black_custom"
+                            android:textIsSelectable="false"
+                            android:textSize="16sp"
+                            tools:ignore="RtlCompat,RtlHardcoded,TextContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/RectangleOne"
+                            android:layout_width="1dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="35dp"
+                            android:contentDescription="@string/separator"
+                            app:srcCompat="@drawable/rectangle" />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <FrameLayout
+                        android:id="@+id/framePictureTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="36dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/pictureTwo"
+                            android:layout_width="150sp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:contentDescription="@string/headOutfit"
+                            app:srcCompat="@drawable/welcome"
+                            tools:ignore="RtlHardcoded" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/white_custom">
+
+                        <ImageButton
+                            android:id="@+id/imageButtonTwo"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom|left"
+                            android:background="@color/white_custom"
+                            android:contentDescription="@string/buy"
+                            app:srcCompat="@drawable/cart"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/priceTwo"
+                            android:layout_width="59sp"
+                            android:layout_height="20sp"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/white_custom"
+                            android:gravity="center|right"
+                            android:text="@string/price"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/black_custom"
+                            android:textIsSelectable="false"
+                            android:textSize="16sp"
+                            tools:ignore="RtlCompat,RtlHardcoded,TextContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/RectangleTwo"
+                            android:layout_width="1dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="35dp"
+                            android:contentDescription="@string/separator"
+                            app:srcCompat="@drawable/rectangle" />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameViewThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/pictureThree"
+                        android:layout_width="150sp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:contentDescription="@string/headOutfit"
+                        android:paddingBottom="36dp"
+                        app:srcCompat="@drawable/welcome"
+                        tools:ignore="RtlHardcoded" />
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/white_custom">
+
+                        <ImageButton
+                            android:id="@+id/imageButtonThree"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom|left"
+                            android:background="@color/white_custom"
+                            android:contentDescription="@string/buy"
+                            app:srcCompat="@drawable/cart"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/priceThree"
+                            android:layout_width="59sp"
+                            android:layout_height="20sp"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/white_custom"
+                            android:gravity="center|right"
+                            android:text="@string/price"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/black_custom"
+                            android:textIsSelectable="false"
+                            android:textSize="16sp"
+                            tools:ignore="RtlCompat,RtlHardcoded,TextContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/RectangleThree"
+                            android:layout_width="1dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="35dp"
+                            android:contentDescription="@string/separator"
+                            app:srcCompat="@drawable/rectangle" />
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameViewFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/pictureFour"
+                        android:layout_width="150sp"
+                        android:layout_height="176sp"
+                        android:layout_gravity="right"
+                        android:contentDescription="@string/headOutfit"
+                        app:srcCompat="@drawable/welcome"
+                        tools:ignore="RtlHardcoded" />
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/white_custom">
+
+                        <ImageButton
+                            android:id="@+id/imageButtonFour"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom|left"
+                            android:background="@color/white_custom"
+                            android:contentDescription="@string/buy"
+                            app:srcCompat="@drawable/cart"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/priceFour"
+                            android:layout_width="59sp"
+                            android:layout_height="20sp"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/white_custom"
+                            android:gravity="center|right"
+                            android:text="@string/price"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/black_custom"
+                            android:textIsSelectable="false"
+                            android:textSize="16sp"
+                            tools:ignore="RtlCompat,RtlHardcoded,TextContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/RectangleFour"
+                            android:layout_width="1dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="35dp"
+                            android:contentDescription="@string/separator"
+                            app:srcCompat="@drawable/rectangle" />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameViewFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/pictureFive"
+                        android:layout_width="150sp"
+                        android:layout_height="176sp"
+                        android:layout_gravity="right"
+                        android:contentDescription="@string/headOutfit"
+                        app:srcCompat="@drawable/welcome"
+                        tools:ignore="RtlHardcoded" />
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/white_custom">
+
+                        <ImageButton
+                            android:id="@+id/imageButtonFive"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom|left"
+                            android:background="@color/white_custom"
+                            android:contentDescription="@string/buy"
+                            app:srcCompat="@drawable/cart"
+                            tools:ignore="RtlHardcoded,TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/priceFive"
+                            android:layout_width="59sp"
+                            android:layout_height="20sp"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/white_custom"
+                            android:gravity="center|right"
+                            android:text="@string/price"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/black_custom"
+                            android:textIsSelectable="false"
+                            android:textSize="16sp"
+                            tools:ignore="RtlCompat,RtlHardcoded,TextContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/RectangleFive"
+                            android:layout_width="1dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="35dp"
+                            android:contentDescription="@string/separator"
+                            app:srcCompat="@drawable/rectangle" />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameViewSix"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/pictureSix"
+                        android:layout_width="150sp"
+                        android:layout_height="176sp"
+                        android:layout_gravity="right"
+                        android:contentDescription="@string/headOutfit"
+                        app:srcCompat="@drawable/welcome"
+                        tools:ignore="RtlHardcoded" />
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/white_custom">
+
+                        <ImageButton
+                            android:id="@+id/imageButton"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom|left"
+                            android:background="@color/white_custom"
+                            android:contentDescription="@string/buy"
+                            app:srcCompat="@drawable/cart"
+                            tools:ignore="RtlHardcoded,TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/priceSix"
+                            android:layout_width="59sp"
+                            android:layout_height="20sp"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/white_custom"
+                            android:gravity="center|right"
+                            android:text="@string/price"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/black_custom"
+                            android:textIsSelectable="false"
+                            android:textSize="16sp"
+                            tools:ignore="RtlCompat,RtlHardcoded,TextContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/RectangleSix"
+                            android:layout_width="1dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="35dp"
+                            android:contentDescription="@string/separator"
+                            app:srcCompat="@drawable/rectangle" />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/readyOutfitsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="100dp"
+            android:text="@string/headReadyOutfits"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameReadyOutfits" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
