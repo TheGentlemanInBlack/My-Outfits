@@ -11,9 +11,27 @@
     <string name="headReadyOutfits">Популярные готовые аутфиты</string>
     <string name="descriptionCollectOutfits">Собери свой аутфит под нужный бюджет настроив лишь пару необходимых фильтров!</string>
     <string name="buy">Положить в корзину</string>
-    <string name="price">5200 Р</string>
+    <string name="price_outfit_one">5200 Р</string>
+    <string name="price_outfit_two">5300 Р</string>
+    <string name="price_outfit_three">5400 Р</string>
+    <string name="price_outfit_four">5500 Р</string>
+    <string name="price_outfit_five">5600 Р</string>
+    <string name="price_outfit_six">5700 Р</string>
     <string name="separator">separator</string>
     <string name="editBudget">Изменить бюджет</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="descriptionScroll">parameters</string>
+    <string name="choseWomanDescription">Женский</string>
+    <string name="choseManDescription">Мужской</string>
+    <string name="nameSeasons">Времена года:</string>
+    <string name="spring">Весна</string>
+    <string name="summer">Лето</string>
+    <string name="autumn">Осень</string>
+    <string name="winter">Зима</string>
+    <string name="prefer_style">Предпочитаемый стиль:</string>
+    <string name="description_style_one">Casual</string>
+    <string name="description_style_two">Casual</string>
+    <string name="description_style_three">Casual</string>
+    <string name="description_style_four">Casual</string>
+    <string name="description_style_five">Casual</string>
+    <string name="description_style_six">Casual</string>
 </resources>

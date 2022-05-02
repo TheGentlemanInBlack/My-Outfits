@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/collectOutfit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/red"
+            android:text="@string/collectOutfit"
+            android:textColor="@color/white"
+            tools:ignore="TouchTargetSizeCheck" />
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="489dp"
+        android:layout_marginTop="112dp"
+        android:contentDescription="@string/descriptionScroll"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/liner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/choseWoman"
+                    android:layout_width="182dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/white_custom"
+                    android:text="@string/choseWomanDescription"
+                    android:textColor="@color/black_custom"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/choseMan"
+                    android:layout_width="182dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="214dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/white_custom"
+                    android:text="@string/choseManDescription"
+                    android:textColor="@color/black_custom"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="288dp"
+                    android:text="@string/nameSeasons"
+                    android:textColor="@color/black_custom"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/spring"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white_custom"
+                    android:contentDescription="@string/spring"
+                    android:src="@drawable/spring">
+
+                </ImageButton>
+
+                <ImageButton
+                    android:id="@+id/summer"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@color/white_custom"
+                    android:contentDescription="@string/summer"
+                    android:src="@drawable/summer">
+
+                </ImageButton>
+
+                <ImageButton
+                    android:id="@+id/autumn"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="228dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@color/white_custom"
+                    android:contentDescription="@string/autumn"
+                    android:src="@drawable/autumn">
+
+                </ImageButton>
+
+                <ImageButton
+                    android:id="@+id/winter"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="332dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/white_custom"
+                    android:contentDescription="@string/winter"
+                    android:src="@drawable/winter">
+
+                </ImageButton>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="210dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/prefer_style"
+                        android:textColor="@color/black_custom"
+                        android:textSize="16sp" />
+                </FrameLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="184dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginBottom="3dp"
+                    android:scrollbars="none"
+                    tools:ignore="MissingConstraints">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/frameOne"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <FrameLayout
+                                android:id="@+id/framePictureOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="30dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/pictureOne"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/description_style_one"
+                                    app:srcCompat="@drawable/welcome"
+                                    tools:ignore="RtlHardcoded" />
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white_custom">
+
+                                <TextView
+                                    android:id="@+id/descriptionOne"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="14sp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@color/white_custom"
+                                    android:gravity="center"
+                                    android:text="@string/description_style_one"
+                                    android:textAlignment="gravity"
+                                    android:textColor="@color/black_custom"
+                                    android:textIsSelectable="false"
+                                    android:textSize="12sp"
+                                    tools:ignore="RtlCompat,RtlHardcoded,TextContrastCheck" />
+
+                            </FrameLayout>
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/frameTwo"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <FrameLayout
+                                android:id="@+id/framePictureTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="30dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/pictureTwo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/description_style_two"
+                                    app:srcCompat="@drawable/welcome"
+                                    tools:ignore="RtlHardcoded" />
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white_custom">
+
+                                <TextView
+                                    android:id="@+id/descriptionTwo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="14sp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@color/white_custom"
+                                    android:gravity="center"
+                                    android:text="@string/description_style_two"
+                                    android:textAlignment="gravity"
+                                    android:textColor="@color/black_custom"
+                                    android:textIsSelectable="false"
+                                    android:textSize="12sp"
+                                    tools:ignore="RtlCompat,RtlHardcoded,TextContrastCheck" />
+
+                            </FrameLayout>
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/frameThree"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <FrameLayout
+                                android:id="@+id/framePictureThree"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="30dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/pictureThree"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/description_style_three"
+                                    app:srcCompat="@drawable/welcome"
+                                    tools:ignore="RtlHardcoded" />
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white_custom">
+
+                                <TextView
+                                    android:id="@+id/descriptionThree"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="14sp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@color/white_custom"
+                                    android:gravity="center"
+                                    android:text="@string/description_style_three"
+                                    android:textAlignment="gravity"
+                                    android:textColor="@color/black_custom"
+                                    android:textIsSelectable="false"
+                                    android:textSize="12sp"
+                                    tools:ignore="RtlCompat,RtlHardcoded,TextContrastCheck" />
+
+                            </FrameLayout>
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/frameFour"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <FrameLayout
+                                android:id="@+id/framePictureFour"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="30dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/pictureFour"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/description_style_four"
+                                    app:srcCompat="@drawable/welcome"
+                                    tools:ignore="RtlHardcoded" />
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white_custom">
+
+                                <TextView
+                                    android:id="@+id/descriptionFour"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="14sp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@color/white_custom"
+                                    android:gravity="center"
+                                    android:text="@string/description_style_four"
+                                    android:textAlignment="gravity"
+                                    android:textColor="@color/black_custom"
+                                    android:textIsSelectable="false"
+                                    android:textSize="12sp"
+                                    tools:ignore="RtlCompat,RtlHardcoded,TextContrastCheck" />
+
+                            </FrameLayout>
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/frameFive"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <FrameLayout
+                                android:id="@+id/framePictureFive"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="30dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/pictureFive"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/description_style_five"
+                                    app:srcCompat="@drawable/welcome"
+                                    tools:ignore="RtlHardcoded" />
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white_custom">
+
+                                <TextView
+                                    android:id="@+id/descriptionFive"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="14sp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@color/white_custom"
+                                    android:gravity="center"
+                                    android:text="@string/description_style_five"
+                                    android:textAlignment="gravity"
+                                    android:textColor="@color/black_custom"
+                                    android:textIsSelectable="false"
+                                    android:textSize="12sp"
+                                    tools:ignore="RtlCompat,RtlHardcoded,TextContrastCheck" />
+
+                            </FrameLayout>
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/frameSix"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <FrameLayout
+                                android:id="@+id/framePictureSix"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="30dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/pictureSix"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/description_style_six"
+                                    app:srcCompat="@drawable/welcome"
+                                    tools:ignore="RtlHardcoded" />
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white_custom">
+
+                                <TextView
+                                    android:id="@+id/descriptionSix"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="14sp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@color/white_custom"
+                                    android:gravity="center"
+                                    android:text="@string/description_style_six"
+                                    android:textAlignment="gravity"
+                                    android:textColor="@color/black_custom"
+                                    android:textIsSelectable="false"
+                                    android:textSize="12sp"
+                                    tools:ignore="RtlCompat,RtlHardcoded,TextContrastCheck" />
+
+                            </FrameLayout>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
